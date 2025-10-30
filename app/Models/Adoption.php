@@ -1,0 +1,23 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class Adoption extends Model
+{
+    use HasFactory;
+
+    protected $fillable = ['pet_id', 'adopter_id', 'date_adopted'];
+
+    public function pet()
+    {
+        return $this->belongsTo(Pet::class);
+    }
+
+    public function adopter()
+    {
+        return $this->belongsTo(Adopter::class);
+    }
+}

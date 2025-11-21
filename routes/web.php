@@ -6,6 +6,6 @@ use App\Http\Controllers\AdopterController;
 use App\Http\Controllers\AdoptionController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/pets', [PetController::class, 'index'])->name('pets.index');
-Route::get('/adopters', [AdopterController::class, 'index'])->name('adopters.index');
-Route::get('/adoptions', [AdoptionController::class, 'index'])->name('adoptions.index');
+Route::resource('pets', PetController::class);
+Route::resource('adopters', AdopterController::class);
+Route::resource('adoptions', AdoptionController::class)->only(['index','create','store','destroy']);

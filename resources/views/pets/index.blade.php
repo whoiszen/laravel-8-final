@@ -6,7 +6,10 @@
       <h2>Pets</h2>
       <p class="mb-0 text-muted">Available and Adopted Pets shown here!</p>
     </div>
-    <a href="{{ route('adopters.index') }}" class="btn btn-accent btn-sm">View Adopters</a>
+    <div class="btn-group">
+      <a href="{{ route('pets.create') }}" class="btn btn-primary btn-sm">New Pet</a>
+      <a href="{{ route('adopters.index') }}" class="btn btn-accent btn-sm">View Adopters</a>
+    </div>
   </div>
 
   <div class="card">

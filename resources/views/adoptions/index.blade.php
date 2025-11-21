@@ -3,9 +3,12 @@
 @section('content')
 <div class="my-4">
 
-    <div class="d-flex justify-content-between align-items-center mb-3">
+        <div class="d-flex justify-content-between align-items-center mb-3">
         <h2 class="fw-bold mb-0">🐾 Adoption Records</h2>
-        <a href="{{ url('/') }}" class="btn btn-accent btn-sm">Back to Home</a>
+        <div class="btn-group">
+            <a href="{{ route('adoptions.create') }}" class="btn btn-primary btn-sm">New Adoption</a>
+            <a href="{{ url('/') }}" class="btn btn-accent btn-sm">Back to Home</a>
+        </div>
     </div>
 
     <div class="card shadow-sm rounded-3">
